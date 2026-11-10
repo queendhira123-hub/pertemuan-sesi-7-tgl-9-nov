@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Biodata</title>
+</head>
+<body>
+<form action="form4.html" method="POST">
+    <fieldset>
+        <legend><h1>Formulir Peserta</h1></legend>
+        <p>
+            <label for="nama">Nama:</label>
+            <input type="text" id="nama" name="nama" placeholder="Masukkan nama lengkap" required>
+        </p>
+        <p>
+            <label for="username">Username:</label>
+            <input type="text" id="username" name="username" placeholder="Masukkan username"
+                   minlength="4" required>
+        </p>
+        <p>
+            <!-- PERBAIKAN: type="password" + minlength agar tidak terlihat dan tidak terlalu pendek -->
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" placeholder="Minimal 8 karakter"
+                   minlength="8" autocomplete="new-password" required>
+        </p>
+        <p>
+            Jenis Kelamin:
+            <label><input type="radio" name="jenkel" value="laki-laki" required> Laki-laki</label>
+            <label><input type="radio" name="jenkel" value="perempuan"> Perempuan</label>
+        </p>
+        <p>
+            <label for="tanggal">Tanggal Lahir:</label>
+            <input type="date" id="tanggal" name="tanggal" required>
+        </p>
+        <p>
+            <label for="agama">Agama:</label>
+            <select name="agama" id="agama" required>
+                <option value="" selected disabled>-- Pilih agama --</option>
+                <option value="budha">Budha</option>
+                <option value="hindu">Hindu</option>
+                <option value="islam">Islam</option>
+                <option value="katholik">Kristen Katolik</option>
+                <option value="protestan">Kristen Protestan</option>
+            </select>
+        </p>
+        <p>
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" placeholder="nama@contoh.com" required>
+        </p>
+        <p>
+            <!-- PERBAIKAN: satu name "course", value berbeda; label sesuai isi -->
+            Pilih Course:
+            <label><input type="checkbox" name="course" value="web-native"> Web Native</label>
+            <label><input type="checkbox" name="course" value="web-framework"> Web Framework</label>
+            <label><input type="checkbox" name="course" value="mobile-native"> Mobile Native</label>
+            <label><input type="checkbox" name="course" value="mobile-lintas-platform"> Mobile Lintas Platform</label>
+        </p>
+        <p>
+            <!-- PERBAIKAN: tidak ada lagi <p> di dalam <p> -->
+            <label for="alamat">Alamat:</label><br>
+            <textarea id="alamat" name="alamat" cols="50" rows="10"></textarea>
+        </p>
+        <p>
+            <input type="submit" name="submit" value="Daftar">
+        </p>
+    </fieldset>
+</form>
+</body>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mengenal Textarea</title>
+    <style>
+        label { display: block; font-weight: bold; margin-bottom: 6px; }
+        /* PERBAIKAN: ukuran 16px dan warna gelap (kontras tinggi), lebar menyesuaikan layar */
+        #alamat {
+            font-size: 16px;
+            color: #222222;
+            font-style: normal;
+            width: 100%;
+            max-width: 420px;
+        }
+    </style>
+</head>
+<body>
+<form action="form2.html" method="get">
+    <!-- PERBAIKAN: label terhubung ke textarea lewat for="alamat" -->
+    <label for="alamat">Alamat:</label>
+    <textarea name="alamat" id="alamat" cols="30" rows="10" required
+              placeholder="Contoh: Jl. Veteran No. 10, Malang"></textarea>
+    <!-- PERBAIKAN: tombol kirim ditambahkan -->
+    <p><button type="submit">Kirim</button></p>
+</form>
+</body>
+</html>
